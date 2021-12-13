@@ -5,6 +5,8 @@ public class Movie {
     private String nameMovie;
     private String movieDescription;
 
+    public Movie() {    }
+
     public Movie(String movieId, String nameMovie, String movieDescription) {
         this.movieId = movieId;
         this.nameMovie = nameMovie;
