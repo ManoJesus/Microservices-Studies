@@ -1,15 +1,22 @@
 package com.github.manojesus.moviecatalogservice.models;
 
-import java.util.LinkedList;
 import java.util.List;
 
 public class UserRating {
-    private List<Rating> userRatings = new LinkedList<>();
+    private String userId;
+    private List<Rating> userRatings;
 
-    public UserRating() {    }
-
-    public UserRating(List<Rating> userRatings) {
+    public UserRating(String userId,List<Rating> userRatings) {
+        this.userId = userId;
         this.userRatings = userRatings;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public List<Rating> getUserRatings() {

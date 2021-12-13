@@ -21,9 +21,12 @@ public class RatingResource {
 
     @GetMapping("users/{userId}")
     public UserRating getUserRating(@PathVariable String userId){
-        return new UserRating(new ArrayList<>(List.of(
-                new Rating("1234",4),
-                new Rating("2423",1)
+        return new UserRating(
+                userId,
+                new ArrayList<>(
+                List.of(
+                new Rating("12",4),
+                new Rating("550",1)
         )));
     }
 }
